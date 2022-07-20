@@ -21,8 +21,12 @@
     "webpack-dev-server": "^4.9.3"
   },
   "dependencies": {
-    "iconv-lite": "^0.6.3",
+    "buffer": "^6.0.3",
+    "dayjs": "^1.11.4",
     "file-saver": "^2.0.5",
-    "buffer": "^6.0.3"
+    "iconv-lite": "^0.6.3",
+    "jquery": "^3.6.0",
+    "jszip": "^3.10.0",
+    "xlsx": "^0.18.5"
   }
 }

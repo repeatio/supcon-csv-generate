@@ -19,6 +19,7 @@ module.exports = {
             Buffer: ['buffer', 'Buffer'],
         }),
     ],
+    devtool: "source-map",
     module: {
         rules: [
             {
