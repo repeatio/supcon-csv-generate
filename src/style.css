@@ -1,3 +1,11 @@
 span {
     color: green;
 }
+
+button {
+    display: none;
+}
+
+pre{
+    display: block;    
+}

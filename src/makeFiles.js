@@ -16,39 +16,11 @@ const dayjs = require('dayjs')
     类型: '气动切断阀',
   }
  */
-export function makeFiles(deviceArray, downloadName) {
+export function makeFiles(files, downloadName) {
   console.log("this is makeFiles.js");
 
   var zip = new JSZip();
-  deviceArray
-    .filter((device) => device.类型 == "气动切断阀")
-    .map((valve) => {
-      const { 位号, 描述, 流程图 } = valve;
-      return {
-        名称: `205_038_${流程图}_${位号}`,
-        描述: `${描述}`,
-        关联: "<ROOT>\\Object\\205_038_气动阀.dsg",
-        数据个数: "3",
-        文件名: `205_038_${流程图}_${位号}`,
-        位号: `${位号}`,
-        保存文件名: `205_038_${流程图}_${位号}.csv`,
-      };
-    })
-    .map((valve) => {
-      const { 名称, 描述, 关联, 数据个数, 文件名, 位号, 保存文件名 } = valve;
-      const csvContent = `版本号,260
-名称,${名称}
-描述,${描述}
-关联,${关联}
-数据个数,${数据个数}
-[CSV],	,	${文件名},	,	,	,	
-[气动切断阀],	,	${位号},	,	,	,	
-[设备描述],	,	${描述},	,	,	,	`;
-      return {
-        contentStr: csvContent,
-        fileName: 保存文件名,
-      };
-    })
+  files
     .forEach((file) => {
       console.log(file);
       const gbkBuffer = iconv.encode(file.contentStr, "gbk");

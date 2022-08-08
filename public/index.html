@@ -4,9 +4,27 @@
     </head>
     <body>
         <span>批量生成csv文件</span>
-        <button type="button">测试下载</button>
-        <input type="file" id="input" accept=".xls,.xlsx" />
-        <pre id="result"></pre>
 
+        <input type="file" id="input" accept=".xls,.xlsx" />
+        <button type="button" id = "example">测试下载</button>
+        <div id="result" style="white-space:pre">1</div>
+        <!--阀门-->
+            <!--变量-->
+            <button type="button" id="varForValve">自定义变量_阀门反馈</button>
+            <!--TextCode-->
+            <button type="button" id="tCodeValve">TEXTCODE_For_阀门反馈</button>
+            <!--CSV-->
+            <button type="button" id = "downloadCSV">阀门_CSV文件</button>
+        <!--电机-->
+            <!--变量-->
+            <button type="button" id="varForMotor">自定义变量_电机反馈</button>
+            <!--TextCode-->
+            <button type="button" id="tCodeMotor">TEXTCODE_For_电机启停</button>
+            <button type="button" id="tCodeVarFreqMotorFb">TEXTCODE_For_电机反馈_变频</button>
+            <button type="button" id="tCodeFixedFreqMotorFb">TEXTCODE_For_电机反馈_定频</button>
+            <!--CSV-->
+            <button type="button" id = "motorCSV">电机_CSV文件</button>
+        <!--验收-->
+            <button type="button" id="checkTableOfValve">阀门验收表格</button>
     </body>
 </html>
